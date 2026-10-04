@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// 한글이 글자 단위로 끊기지 않게 하고, 휴대폰에서 표 첫 칸(구분)이 한 글자씩 줄바꿈되지 않게 한다.
+body { word-break: keep-all; }
+table { display: block; overflow-x: auto; }
+th:first-child, td:first-child { white-space: nowrap; }
