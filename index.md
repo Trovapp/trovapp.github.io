@@ -8,3 +8,4 @@ title: Trova
 
 - [개인정보처리방침](privacy/)
 - [이용약관](terms/)
+- [계정 삭제](delete-account/)
