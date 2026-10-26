@@ -79,6 +79,18 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--mint); outline-
 .chores li.ok { background: var(--forest); border-color: var(--forest); color: #fff; }
 .chores li.ok .x { background: var(--accent); color: #fff; }
 
+/* 영상 속 꿀팁 */
+.tips { padding-block: 36px 4px; }
+.tips h2 { font-size: 1.35rem; line-height: 1.35; letter-spacing: -0.025em; margin: 0 0 6px; text-wrap: balance; }
+.tips .lead { color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
+.tip-grid { display: grid; gap: 12px; }
+.tip { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+.tip img { display: block; width: 100%; height: 190px; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: #fff; }
+.tip figcaption { padding: 12px 14px 14px; display: grid; gap: 4px; }
+.tip figcaption b { font-size: 1rem; }
+.tip figcaption span { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+@media (min-width: 760px) { .tip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
 /* 기기별 설치 */
 .guide { padding-block: 40px 44px; }
 .guide .lead { color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
@@ -171,6 +183,25 @@ footer a:hover { text-decoration: underline; }
       <li><span class="x" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l8 8M10 2l-8 8"/></svg></span><p><s>지도 앱에 한 곳씩 검색해 저장하기</s></p></li>
       <li class="ok"><span class="x" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span><p><b>공유 한 번</b>이면 장소·지도·일정이 한 번에</p></li>
     </ul>
+  </section>
+
+  <section class="tips inner" aria-labelledby="tips-title">
+    <h2 id="tips-title">영상 속 꿀팁도 같이 챙겨요</h2>
+    <p class="lead">장소 이름만 뽑지 않아요. 영상에서 말한 팁과 주의할 점을 장소마다 붙여 둬요.</p>
+    <div class="tip-grid">
+      <figure class="tip">
+        <img src="assets/tip-memo.jpg" alt="장소마다 영상에서 말한 팁이 메모로 붙은 일정 화면" loading="lazy">
+        <figcaption><b>장소마다 영상 메모</b><span>“택시비 5,400원 거리”, “방파제에서 사진 촬영 가능”처럼 영상에서 들은 팁이 그대로 남아요.</span></figcaption>
+      </figure>
+      <figure class="tip">
+        <img src="assets/tip-warn.jpg" alt="휴무일·영업시간 미확인, 점심 식당 없음 같은 주의사항이 표시된 일정 초안" loading="lazy">
+        <figcaption><b>놓치기 쉬운 주의사항</b><span>휴무일·영업시간을 아직 확인 못 한 곳, 점심때 식당이 비는 일정을 먼저 알려 줘요.</span></figcaption>
+      </figure>
+      <figure class="tip">
+        <img src="assets/tip-review.jpg" alt="좋은 점과 아쉬운 점으로 정리한 장소 리뷰 요약" loading="lazy">
+        <figcaption><b>리뷰는 좋은 점·아쉬운 점으로</b><span>리뷰를 일일이 읽지 않아도 한눈에 비교할 수 있어요.</span></figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="guide inner" aria-labelledby="guide-title">
